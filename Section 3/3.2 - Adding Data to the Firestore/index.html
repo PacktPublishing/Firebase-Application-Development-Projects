@@ -1,0 +1,141 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>Packt Blog</title>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="z-depth-0 orange">
+        <div class="nav-wrapper container">
+          <a href="#" class="brand-logo">
+            <h5>Packt></h5>
+          </a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li class="logged-in" style="display:none">
+                <a href="#" class="white-text modal-trigger" data-target="modal-account">Account</a>
+              </li>
+              <li class="logged-in" style="display:none">
+                <a href="#" class="white-text" id="logout">Logout</a>
+              </li>
+              <li class="logged-in" style="display:none">
+                <a href="#" class="white-text modal-trigger" data-target="modal-create">Create Post</a>
+              </li>
+              <li class="logged-out" style="display:none">
+                <a href="#" class="white-text modal-trigger" data-target="modal-login">Login</a>
+              </li>
+              <li class="logged-out" style="display:none">
+                <a href="#" class="white-text modal-trigger" data-target="modal-signup">Sign up</a>
+              </li>
+            </span>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- SIGN UP MODAL -->
+  <div id="modal-signup" class="modal">
+        <div class="modal-content">
+          <h4>Sign up</h4><br />
+          <form id="signup-form">
+            <div class="input-field">
+              <input type="email" id="signup-email" required />
+              <label for="signup-email">Email address</label>
+            </div>
+            <div class="input-field">
+              <input type="password" id="signup-password" required />
+              <label for="signup-password">Choose password(Must be at least 6 chars)</label>
+            </div>
+            <button class="btn orange z-depth-0">Sign up</button>
+          </form>
+        </div>
+      </div>
+      <!-- LOGIN MODAL -->
+      <div id="modal-login" class="modal">
+        <div class="modal-content">
+          <h4>Login</h4><br />
+          <form id="login-form">
+            <div class="input-field">
+              <input type="email" id="login-email" required />
+              <label for="login-email">Email address</label>
+            </div>
+            <div class="input-field">
+              <input type="password" id="login-password" required />
+              <label for="login-password">Your password</label>
+            </div>
+            <button class="btn orange z-depth-0">Login</button>
+            <button class="btn green lighten-2 z-depth-0" id="googleLogin">Login with Google</button>
+
+            <!-- Login with Facebook -->
+            <button class="btn blue lighten-2 z-depth-0" id="facebookLogin">Login with Facebook</button>
+            
+          </form>
+        </div>
+      </div>
+      <!-- ACCOUNT MODAL -->
+      <div id="modal-account" class="modal">
+        <div class="modal-content center-align">
+          <h4>Account details</h4><br />
+          <div class="account-details"></div>
+        </div>
+      </div>
+      <!-- CREATE POST MODAL -->
+      <div id="modal-create" class="modal">
+        <div class="modal-content">
+          <h4>Create Blog Post</h4><br />
+          <form id="create-form">
+            <div class="input-field">
+              <input type="text" id="title" required>
+              <label for="title">Title</label>
+            </div>
+            <div class="input-field">
+              <textarea id="content" class="materialize-textarea" required></textarea>
+              <label for="content">Content</label>
+            </div>
+            <button class="google-login btn orange z-depth-0">Create New Post</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- POST TITLE -->
+      <div class="container" style="margin-top: 40px;">
+        <ul class="collapsible z-depth-0 posts" style="border: none;">
+          
+        </ul>
+      </div>
+
+      <!--Place Firebase Script Here!!-->
+
+      <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-firestore.js"></script>
+      <script>
+      // Initialize Firebase
+      const config = {
+      apiKey: "AIzaSyBbKPuFHZEimGk35eNg6wW4e31OWRubQTU",
+      authDomain: "packtfirebase.firebaseapp.com",
+      databaseURL: "https://packtfirebase.firebaseio.com",
+      projectId: "packtfirebase",
+      storageBucket: "packtfirebase.appspot.com",
+      messagingSenderId: "931488985584"
+      };
+      firebase.initializeApp(config);
+
+      //initialiaze the auth reference
+      const auth = firebase.auth();
+      const fs = firebase.firestore();
+
+      </script>
+
+
+
+      <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="scripts/auth.js"></script>
+  <script src="scripts/index.js"></script>
+
+    
+</body>
+</html>

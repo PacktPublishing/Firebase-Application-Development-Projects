@@ -1,0 +1,37 @@
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Packt Hack</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    </head>
+    <body>
+
+        <!--Place Firebase Script Here!!-->
+
+      <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-firestore.js"></script>
+      <script>
+      // Initialize Firebase
+      const config = {
+      apiKey: "AIzaSyBbKPuFHZEimGk35eNg6wW4e31OWRubQTU",
+      authDomain: "packtfirebase.firebaseapp.com",
+      databaseURL: "https://packtfirebase.firebaseio.com",
+      projectId: "packtfirebase",
+      storageBucket: "packtfirebase.appspot.com",
+      messagingSenderId: "931488985584"
+      };
+      firebase.initializeApp(config);
+
+      //initialiaze the firestore reference
+      const fs = firebase.firestore();
+
+      </script>
+      <!-- Compiled and minified JavaScript -->
+  <script src="scripts/index.js"></script>
+ 
+    </body>
+</html>
