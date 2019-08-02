@@ -20,8 +20,7 @@ By the end of the course, you will have learned to integrate Firebase into your 
 
 ## Instructions and Navigation
 ### Assumed Knowledge
-To fully benefit from the coverage included in this course, you will need:<br/>
-Focused and on-point, this video course delivers clear, step-by-step treatments of a wide array of deployment options and techniques. In addition to deployment practices, this course offers several value-added solutions to make the deployment process as seamless and efficient as possible.
+This course is for mobile developers keen to build applications via Firebase from scratch. If you want to build your own apps while extending your UI at the backend with Firebase, then this video is what you need! Basic knowledge of Firebase is assumed.
 ### Technical Requirements
 This course has the following software requirements:<br/>
 This course has the following software requirements:
